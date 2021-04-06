@@ -12,21 +12,25 @@ Original file is located at
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import warnings
+import pickle
+
+warnings.filterwarnings("ignore")
 
 """### Import Dataset"""
 
 dataset = pd.read_csv("Forest_fire.csv")
 
-dataset.head()
+#dataset.head()
 
 """### Splitting dataset"""
 
 x = dataset.iloc[1:,1:-1].values
 y = dataset.iloc[1:,-1].values
 
-print(x)
+#print(x)
 
-print(y)
+#print(y)
 
 """### Splitting data into Training and Test Set"""
 
@@ -43,18 +47,23 @@ model.fit(x_train,y_train)
 
 """### Predicting Test Set results"""
 
-y_pred = model.predict(x_test)
+#y_pred = model.predict(x_test)
 
 """### Evaluating Test Set results"""
 
-from sklearn.metrics import confusion_matrix, accuracy_score
+#from sklearn.metrics import confusion_matrix, accuracy_score
 
-con = confusion_matrix(y_test,y_pred)
-acc = accuracy_score(y_test,y_pred)
+#con = confusion_matrix(y_test,y_pred)
+#acc = accuracy_score(y_test,y_pred)
 
-print("Confusion Matrix Analysis:\n" ,con)
-print("Accuracy Score:\n",acc)
+#print("Confusion Matrix Analysis:\n" ,con)
+#print("Accuracy Score:\n",acc)
 
-y_test
+#y_test
 
-y_pred
+#y_pred
+
+"""### Pickle file usage"""
+
+pickle.dump(model, open("model.pkl","wb"))
+model_1 = pickle.load(open("model.pkl","rb"))
