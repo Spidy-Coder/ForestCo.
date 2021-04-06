@@ -1,1 +1,1 @@
-# Forest_Fire_Prediction
+# Forest_Fire_Prevection
