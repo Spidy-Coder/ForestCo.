@@ -20,3 +20,5 @@ This readme will get changed soon with all necessary information about this proj
 
 <b>7. AWS EC2</b>
 
+project under developement...
+
