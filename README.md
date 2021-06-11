@@ -14,7 +14,7 @@ Forest fires prediction combines weather factors, terrain, dryness of flammable 
 
 <b>4. Materialize css</b>
 
-<b>5. Sklearn</b>
+<b>5. Sklearn, pandas</b>
 
 <b>6. Flask</b>
 
